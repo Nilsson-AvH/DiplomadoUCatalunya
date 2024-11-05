@@ -1,0 +1,36 @@
+nav{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    width: 10%;
+    list-style: none;
+}
+
+.menu a {
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+.logo{
+    flex-grow: 3;
+}
+
+.logo img{
+    width: 15%;
+    padding: 1% 2% 1% 5%;
+}
+
+.menu a:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: 5px #ffffff solid;
+    border-radius: 3px;
+}

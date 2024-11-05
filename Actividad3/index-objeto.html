@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./ico/favicon.ico" type="image/x-icon">
+    <title>Super Lista de materiales</title>
+    <link   rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous">
+</head>
+<body>
+
+    <h1 class="text-center"> 
+        Agregar lista de materiales.
+    </h1>
+    <hr>
+    <div class="container text-left">
+        <div class="row">
+            <div class="col-4 mb-2 mt-2">
+                Nombre: <input  type="text"
+                        pattern="[a-z]{1,15}"
+                        title="Only contain letters. e.g. Coffe"
+                        class="form-control"
+                        name="item"
+                        id="item"
+                        placeholder="Escriba el material a comprar"
+                        required >
+            </div>
+            <div class="col-4 mb-2 mt-2">
+                Descripcion: <input  type="text"
+                        pattern="[a-z]{1,15}"
+                        title="Only contain letters. e.g. Coffe"
+                        class="form-control"
+                        name="descrip"
+                        id="descrip"
+                        placeholder="Escriba la descripcion"
+                        required >
+            </div>
+            <div class="col-4 mb-2 mt-2">
+                Valor: <input  type="number"
+                        pattern="[0-9]{1,15}"
+                        title="Only contain letters. e.g. Coffe"
+                        class="form-control"
+                        name="value"
+                        id="value"
+                        placeholder="Escriba el valor"
+                        required >
+            </div>
+            <div class="col text-center m-2">
+                <button type="button" class="btn btn-info" onclick="addItem()">
+                    Agregar
+                </button>
+            </div>            
+        </div>
+        <div style="width: 70%; text-align: justify; margin: 5%;"> <!-- No de debe colocar estilos acá, para eso estan los srchivos css -->
+            <h2 class="text-center mb-3"> 
+                Lista de articulos 
+            </h2>
+            <hr>
+            <div class="row" id="items"> 
+                No hay elementos 
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <script src="./js/objetoScript.js" ></script>
+    
+</body>
+<footer>
+    <p>
+        Powered By: <b>NilssonAvH</b>
+    </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/sweetAlert2Script.js"></script>
+
+</html>
