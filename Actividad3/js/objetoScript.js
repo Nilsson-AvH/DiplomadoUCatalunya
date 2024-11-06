@@ -1,5 +1,5 @@
 
-let items = localStorage.getItem('itemList')
+let items = localStorage.getItem('itemListObject')
 items = items ? JSON.parse(items) : [] /*esto es un if de una linea*/
 showItem()
 
@@ -42,7 +42,7 @@ function showItem() {
         html += `<div class="col"> <a href="#" class="btn btn-danger" onclick="deleteItem(${index})"> X </a> </div>`
     });
 
-    localStorage.setItem('itemList', JSON.stringify(items))
+    localStorage.setItem('itemListObject', JSON.stringify(items))
     document.getElementById('items').innerHTML = html // Enviar la informacion al HTML
 }
 

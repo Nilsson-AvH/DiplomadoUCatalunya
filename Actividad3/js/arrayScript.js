@@ -2,23 +2,23 @@
 // ---------------
 // sessionStorage
 
-let items = localStorage.getItem('itemList')
+let items = localStorage.getItem('itemListArray')
 items = items ? items.split(',') : [] /*esto es un if de una linea*/
 showItem()
 
 function addItem() {
-    let item = document.getElementById('item').value
+    let item = document.getElementById('item').value // Acá traemos el valor de id="item" del documento html
     item = item.split(',')
     for (let i = 0; i < item.length; i++) {
         if(item[i]){
-            items.push(item[i]) // Agegar dato
+            items.push(item[i]) // Agegar dato al array items
             showItem()       
         }
     }
 }
 
 function showItem() {
-    document.getElementById('item').value = ''
+    document.getElementById('item').value = '' // Limpiamos los campos
     let html = ''
     for (let i = 0; i < items.length; i++) {
         
@@ -28,7 +28,7 @@ function showItem() {
         html += `<div class="col"> <a href="#" class="btn btn-danger" onclick="deleteItem(${i})"> X </a> </div>`
     }
 
-    localStorage.setItem('itemList', items)
+    localStorage.setItem('itemListArray', items)
     document.getElementById('items').innerHTML = html // Enviar la informacion al HTML
 }
 
