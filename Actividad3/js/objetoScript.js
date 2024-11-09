@@ -11,7 +11,7 @@ function addItem() {
 
     if (nameItem && descripItem && valueItem){
          items.push({'nombreArticulo':nameItem,'descripArticulo':descripItem,'valorArticulo':valueItem})
-         console.log(typeof nameItem)
+         //console.log(typeof nameItem)
          showItem()
     }
     else if (nameItem==""){
